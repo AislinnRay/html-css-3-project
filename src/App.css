@@ -1,69 +1,114 @@
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box;}
 
 .App {
-  padding: 20px 10px 10px 30px;
+  padding: 20px 50px 50px 50px;
   background-image: url('https://blackrockdigital.github.io/startbootstrap-agency/assets/img/header-bg.jpg');
-  background-size: cover;
-}
+  background-size: cover;}
 
 header {
   width: 100vw;
   align-items: center;
-}
+  position: absolute;}
 
 .nav-container {
+  position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
+  align-items: center;}
 
-.nav-list-item {
+.nav-list-item, .mobile-nav-list-item{
   padding: 16px;
   font-size: 18px;
   cursor: pointer;
   text-decoration: none;
   color: white;
-  justify-content: right;
-}
+  justify-content: right;}
 
 .nav-list-item:hover {
   color: rgb(255, 208, 0);}
 
 .logo-img {
-  height: 60px;
-}
+  height: 30px;}
 
 .hamburger {
-  background-color: orange;
-  height: 100px;
+  background-color: rgb(255, 208, 0);
+  height: 50px;
+  margin: 5px 100px 10px 10px;}
+
+.mobile-nav-list {
+  position: absolute;
+  top: 5vh;
+  right: -100vw;
+  background-color: gray;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-evenly;
+  height: 30vh;
+  width: 100vw;
+  overflow: hidden;
+  transition: all 1000ms;
+  color: white;
   display: none;
-}
+  font-size: 14pt;}
+
+.mobile-nav-list-item {
+  padding: 5px;}
+
+.mobile-nav-list-open {
+  right:0px;}
 
 .hero-text h1{
   font-size:82px;
   color: white;
   text-align: center;
-  padding: 100px;
-
-}
+  padding: 100px;}
 
 .welcome {
   font-size: 28px;
   font-style: italic;
-  font-family: "droid-serif";
-
-}
+  font-family: "droid-serif";}
 
 .greeting {
-  font-size: 64pt;
-}
+  font-size: 50pt;}
 
 .more-box {
-  background-color: orange;
+  background-color: rgb(255, 208, 0);
   color: white;
   padding: 30px 50px;
   border-radius: 10px;
-  text-decoration: none;
+  text-decoration: none;}
+
+.button {
+  text-align: center;}
+
+.mobile-nav-list {
+  display: flex;}
+
+/* ////Media Queries////*/
+
+@media (max-width: 991px) {
+  .header {
+    background-color: rgb(32, 33, 34)
+  }
+  .nav {
+    display: none;
+  }
+  .mobile-nav-list {
+    display: flex;
+    overflow: none;
+  }
 }
+
+@media (min-width: 990px) {
+  .hamburger {
+    display: none;
+  }
+  .mobile-nav-list {
+    display: none;
+  }
+}
+
+/* .hamburger {
+  display: inline-block;
+} */
